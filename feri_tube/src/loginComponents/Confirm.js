@@ -25,9 +25,10 @@ const Confirm = (props) => {
   
   const useStyles = makeStyles((theme) => ({
     marginAutoContainer: {
-      width: "50%", 
-      margin: "auto",
-      alignItems: "center",
+      width: "80%", 
+      margin: "auto",      
+      textAlign: "center",
+      backgroundColor: theme.palette.background.paper
     },
     root: {
       flexGrow: 1,
@@ -43,35 +44,33 @@ const Confirm = (props) => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      
-
+    <React.Fragment>      
       <List className={classes.marginAutoContainer}> 
-        <ListItem className={classes.marginAutoContainer} alignItems="flex-end">
+        <ListItem button className={classes.marginAutoContainer} alignItems="flex-end">
           <ListItemText
             primary="First Name"
             secondary={firstName}
           />
         </ListItem>
-        <ListItem className={classes.marginAutoContainer}>
+        <ListItem button className={classes.marginAutoContainer}>
           <ListItemText
             primary="Last Name"
             secondary={lastName}
           />
         </ListItem>
-        <ListItem className={classes.marginAutoContainer}>
+        <ListItem button className={classes.marginAutoContainer}>
           <ListItemText
             primary="Email"
             secondary={email}
           />
         </ListItem>
-        <ListItem className={classes.marginAutoContainer}>
+        <ListItem button className={classes.marginAutoContainer}>
           <ListItemText
             primary="Status"
             secondary={status}
           />
         </ListItem>
-        <ListItem className={classes.marginAutoContainer}>
+        <ListItem button className={classes.marginAutoContainer}>
           <ListItemText
             primary="City"
             secondary={city}
