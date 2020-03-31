@@ -21,15 +21,14 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Navigation = () => {
-    const classes = useStyles();
-
+  const classes = useStyles();
   return (
     <div>
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: '#006a8e' }}>
         <Toolbar>
-          <a href="/">
-            <img src={require('../Assets/logo.png') } alt="logo" width="160" height="66" />
-          </a>
+          <Link to="/">
+            <img src={require('../Assets/logo2.png') } alt="logo" width="100" height="66" />
+          </Link>
           <Typography variant="h6" className={classes.title}>
             {}
           </Typography>
