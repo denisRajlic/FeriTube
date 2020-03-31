@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
+import Success from './Success'
 
 const UserForm = () => {
 
@@ -74,7 +75,7 @@ const UserForm = () => {
         />
       )
     case 4:
-      return <h1>Success</h1>
+      return <Success />
     default:
       return <h1>Ups! Not handled properly</h1>
   }
