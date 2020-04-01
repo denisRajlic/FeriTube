@@ -1,13 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Youtube from '@u-wave/react-youtube';
-import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import ReactPlayer from 'react-player';
-import CardContent from "@material-ui/core/CardContent";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import Box from '@material-ui/core/Box';
+
 /*
 const Video = props => {
 	return (

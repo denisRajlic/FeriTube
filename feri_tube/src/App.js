@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-import "./App.css";
-import UserForm from "./loginComponents/UserForm";
-import Navigation from "./Navigation/Navigation";
-import { Route } from "react-router-dom";
-import HomePage from "./HomePage/HomePage";
-import React, { Component } from "react";
-=======
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import UserForm from './loginComponents/UserForm';
 import Navigation from './Navigation/Navigation';
 import {Route} from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
 import Video from './Video/Video';
->>>>>>> 24b5edb352b18fbc6ea5f0aeb8cd11a22bc2c1da
 
 class App extends Component {
   state = {
@@ -36,7 +27,6 @@ class App extends Component {
     ]
   };
 
-<<<<<<< HEAD
   render() {
     return (
       <div className="App">
@@ -51,17 +41,6 @@ class App extends Component {
       </div>
     );
   }
-=======
-function App() {
-  return (
-    <div className="App">
-      <Navigation />
-      <Route path="/register" exact component = {UserForm} />
-      <Route path="/" exact component = {HomePage} />
-      <Route path="/video" exact component = {Video} />
-    </div>
-  );
->>>>>>> 24b5edb352b18fbc6ea5f0aeb8cd11a22bc2c1da
 }
 
 export default App;
