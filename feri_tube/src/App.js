@@ -4,7 +4,7 @@ import UserForm from './loginComponents/UserForm';
 import Navigation from './Navigation/Navigation';
 import {Route} from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
-import Video from './Video/Video';
+import VideoPage from './VideoPage/VideoPage';
 
 class App extends Component {
   state = {
@@ -37,7 +37,7 @@ class App extends Component {
           exact
           render={props => <HomePage {...props} podatki={this.state.courses} />}
         />
-        <Route path="/video" exact component = {Video} />
+        <Route path="/video" exact component = {VideoPage} />
       </div>
     );
   }
