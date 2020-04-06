@@ -5,7 +5,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
-const Jumbotron = props => {
+const Jumbotron = (props) => {
   return (
     <div>
       <Card style={{ backgroundColor: "#faf9f9" }}>
@@ -17,24 +17,17 @@ const Jumbotron = props => {
               marginLeft: "auto",
               marginRight: "auto",
               marginBottom: -90,
-              marginTop: -90
+              marginTop: -90,
             }}
             image={require("../../Assets/logo4.png")}
           />
           <CardContent>
-            <Typography
-              variant="body2"
-              color="textPrimary"
-              component="p"
-              align="center"
-            >
+            <Typography align="justify" variant="subtitle1">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. et dolore
+              magna aliqua..
             </Typography>
           </CardContent>
         </CardActionArea>
