@@ -27,14 +27,7 @@ const FormUserDetails = (props) => {
         onChange={handleChange('lastName')}
         defaultValue={values.lastName}
       ></TextField>
-      <br />
-
-      <TextField 
-        label="Email..."        
-        onChange={handleChange('email')}
-        defaultValue={values.email}
-      ></TextField>
-      <br />
+      <br />    
 
       <TextField 
         label="Username..."        
@@ -50,6 +43,13 @@ const FormUserDetails = (props) => {
         defaultValue={values.password}
       ></TextField>
       <br/>
+
+      <TextField 
+        label="Email..."        
+        onChange={handleChange('email')}
+        defaultValue={values.email}
+      ></TextField>
+      <br />
 
       <Button   
         variant="contained"                      

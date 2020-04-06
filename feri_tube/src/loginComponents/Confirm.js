@@ -66,13 +66,7 @@ const Confirm = (props) => {
             primary="Username"
             secondary={username}
           />
-        </ListItem>
-        <ListItem button className={classes.marginAutoContainer}>
-          <ListItemText
-            primary="Password"
-            secondary={password}
-          />
-        </ListItem>
+        </ListItem>        
         <ListItem button className={classes.marginAutoContainer}>
           <ListItemText
             primary="Status"
