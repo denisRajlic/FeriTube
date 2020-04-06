@@ -12,6 +12,8 @@ const UserForm = () => {
     firstName: '',
     lastName: '',
     email: '',
+    username: '',
+    password: '',
     status: '',
     city: ''
   });

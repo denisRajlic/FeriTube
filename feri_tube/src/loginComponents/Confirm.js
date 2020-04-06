@@ -5,10 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
 
-
-
 const Confirm = (props) => {
-
   const proceed = e => {
     e.preventDefault(); 
     //TODO Process FORM - Wait for Backend// 
@@ -21,7 +18,7 @@ const Confirm = (props) => {
   }
 
   // Destructuring
-  const { values: { firstName, lastName, email, status, city } } = props;
+  const { values: { firstName, lastName, email, username, password, status, city } } = props;
   
   const useStyles = makeStyles((theme) => ({
     marginAutoContainer: {
@@ -62,6 +59,18 @@ const Confirm = (props) => {
           <ListItemText
             primary="Email"
             secondary={email}
+          />
+        </ListItem>
+        <ListItem button className={classes.marginAutoContainer}>
+          <ListItemText
+            primary="Username"
+            secondary={username}
+          />
+        </ListItem>
+        <ListItem button className={classes.marginAutoContainer}>
+          <ListItemText
+            primary="Password"
+            secondary={password}
           />
         </ListItem>
         <ListItem button className={classes.marginAutoContainer}>
