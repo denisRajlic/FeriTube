@@ -4,8 +4,8 @@ import UserForm from './loginComponents/UserForm';
 import Navigation from './Navigation/Navigation';
 import {Route} from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
-import Video from './Video/Video';
-import { Container } from '@material-ui/core';
+import VideoPage from './VideoPage/VideoPage';
+import Login from './Login/Login';
 
 class App extends Component {
   state = {
@@ -34,12 +34,13 @@ class App extends Component {
         <Navigation />
         <Container>
         <Route path="/register" exact component={UserForm} />
+        <Route path="/login" exact component={Login} />
         <Route
           path="/"
           exact
           render={props => <HomePage {...props} podatki={this.state.courses} />}
         />
-        <Route path="/video" exact component = {Video} />
+        <Route path="/video" exact component = {VideoPage} />
         </Container>
       </div>
     );

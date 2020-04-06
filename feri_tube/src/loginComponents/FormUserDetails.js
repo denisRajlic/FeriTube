@@ -1,7 +1,6 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField'
+import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
 
 const FormUserDetails = (props) => {
 
@@ -12,7 +11,6 @@ const FormUserDetails = (props) => {
 
   // Destructuring
   const { values, handleChange } = props;
-  
 
   return (
     <React.Fragment>
@@ -29,16 +27,29 @@ const FormUserDetails = (props) => {
         onChange={handleChange('lastName')}
         defaultValue={values.lastName}
       ></TextField>
+      <br />    
 
+      <TextField 
+        label="Username..."        
+        onChange={handleChange('username')}
+        defaultValue={values.username}
+      ></TextField>
       <br />
+
+      <TextField 
+        label="Password..."    
+        type="password"    
+        onChange={handleChange('password')}
+        defaultValue={values.password}
+      ></TextField>
+      <br/>
 
       <TextField 
         label="Email..."        
         onChange={handleChange('email')}
         defaultValue={values.email}
       ></TextField>
-
-      <br/>
+      <br />
 
       <Button   
         variant="contained"                      
