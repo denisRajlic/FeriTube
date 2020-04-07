@@ -6,6 +6,7 @@ import {Route} from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
 import VideoPage from './VideoPage/VideoPage';
 import Login from './Login/Login';
+import Container from '@material-ui/core/Container';
 
 class App extends Component {
   state = {
