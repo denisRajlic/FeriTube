@@ -27,6 +27,7 @@ const Login = () => {
         style={styles.button}
         // TODO send data to backend
         onClick={proceed}
+        
         >
           Continue
         </Button>

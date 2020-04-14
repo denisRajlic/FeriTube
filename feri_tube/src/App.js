@@ -53,8 +53,25 @@ class App extends Component {
         dolzina: 5
       }
     
-    ]
+    ],
+    current: [{
+      name: "Assembler",
+      opis: "",
+      dolzina: 5
+    }]
   };
+
+  currentSetter(item) {
+    this.setState(this.current = [{
+      name: item.name,
+      opis: item.opis,
+      dolzina: item.dolzina
+    }])
+    console.log(item);
+    
+  }
+
+
 
   render() {
     return (
@@ -66,7 +83,7 @@ class App extends Component {
         <Route
           path="/"
           exact
-          render={props => <HomePage {...props} podatki={this.state.courses} />}
+          render={props => <HomePage {...props} podatki={this.state.courses} setter={this.currentSetter.bind(this)}/>}
         />
         <Route path="/video" exact component = {VideoPage} />
         <Route path="/upload" exact component = {Upload} />
