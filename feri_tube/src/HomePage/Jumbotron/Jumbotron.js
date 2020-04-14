@@ -27,7 +27,8 @@ const Jumbotron = (props) => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
               ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. et dolore
-              magna aliqua..
+              magna aliqua..{props.podatki}
+              
             </Typography>
           </CardContent>
         </CardActionArea>

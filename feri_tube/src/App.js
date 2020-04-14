@@ -10,7 +10,7 @@ import Container from '@material-ui/core/Container';
 
 class App extends Component {
   state = {
-    courses: [ //tetstni podatki
+    courses: [ //testni podatki
       {
         name: "Python",
         opis: "",
@@ -25,7 +25,33 @@ class App extends Component {
         name: "Fittnes",
         opis: "",
         dolzina: 5
+      },
+      {
+        name: "Python",
+        opis: "",
+        dolzina: 5
+      },
+      {
+        name: "Assembler",
+        opis: "",
+        dolzina: 5
+      },
+      {
+        name: "Fittnes",
+        opis: "",
+        dolzina: 5
+      },
+      {
+        name: "Python",
+        opis: "",
+        dolzina: 5
+      },
+      {
+        name: "Assembler",
+        opis: "",
+        dolzina: 5
       }
+    
     ]
   };
 
