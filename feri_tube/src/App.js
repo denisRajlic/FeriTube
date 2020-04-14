@@ -6,11 +6,11 @@ import {Route} from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
 import VideoPage from './VideoPage/VideoPage';
 import Login from './Login/Login';
-import Container from '@material-ui/core/Container'; 
+import Container from '@material-ui/core/Container';
 
 class App extends Component {
   state = {
-    courses: [ //tetstni podatki
+    courses: [ //testni podatki
       {
         name: "Python",
         opis: "",
