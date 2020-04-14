@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 
 const ProceedButton = withStyles((theme) => ({
   root: {     
+    color: '#fff',
     backgroundColor: '#006a8e',    
     '&:hover': {
       backgroundColor: '#005e8e',       
