@@ -7,6 +7,7 @@ import HomePage from './HomePage/HomePage'
 import VideoPage from './VideoPage/VideoPage';
 import Login from './Login/Login';
 import Container from '@material-ui/core/Container';
+import Upload from './Upload/Upload';
 
 class App extends Component {
   state = {
@@ -68,6 +69,7 @@ class App extends Component {
           render={props => <HomePage {...props} podatki={this.state.courses} />}
         />
         <Route path="/video" exact component = {VideoPage} />
+        <Route path="/upload" exact component = {Upload} />
         </Container>
       </div>
     );
