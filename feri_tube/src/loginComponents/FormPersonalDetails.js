@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import ProceedButton from '../Styles/ProceedButton';
 
 const FormPersonalDetails = (props) => {
 
@@ -17,11 +18,8 @@ const FormPersonalDetails = (props) => {
   // Destructuring
   const { values, handleChange } = props;
 
-
   return (
     <React.Fragment>
-     
-
       <TextField 
         label="Status..."        
         onChange={handleChange('status')}
@@ -36,13 +34,13 @@ const FormPersonalDetails = (props) => {
       ></TextField>
       <br />
 
-      <Button                         
+      <ProceedButton                         
         variant="contained"        
-        color="primary"
+        color="primary"        
         onClick={proceed}
         >
           Continue
-        </Button>
+        </ProceedButton>
 
         <Button    
         variant="contained"                     

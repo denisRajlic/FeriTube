@@ -1,6 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import ProceedButton from '../Styles/ProceedButton';
 
 const FormUserDetails = (props) => {
 
@@ -51,23 +51,16 @@ const FormUserDetails = (props) => {
       ></TextField>
       <br />
 
-      <Button   
+      <ProceedButton   
         variant="contained"                      
         color="primary"
-        style={styles.button}
         onClick={proceed}
         >
           Continue
-        </Button>
+        </ProceedButton>
 
     </React.Fragment>      
   )
-}
-
-const styles = {
-  button: {
-    margin: 15
-  }
 }
 
 export default FormUserDetails;

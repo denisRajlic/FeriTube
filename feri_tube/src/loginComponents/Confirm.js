@@ -4,6 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
+import ProceedButton from '../Styles/ProceedButton';
 
 const Confirm = (props) => {
   const proceed = e => {
@@ -81,14 +82,14 @@ const Confirm = (props) => {
         </ListItem>
       </List>
       
-      <Button   
+      <ProceedButton   
         variant="contained"                      
         color="primary"
         style={styles.button}
         onClick={proceed}
         >
           Confirm & Continue
-        </Button>
+        </ProceedButton>
 
         <Button    
         variant="contained"                     
