@@ -6,6 +6,7 @@ import {Route} from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
 import VideoPage from './VideoPage/VideoPage';
 import Login from './Login/Login';
+import Container from '@material-ui/core/Container'; 
 
 class App extends Component {
   state = {
@@ -24,7 +25,33 @@ class App extends Component {
         name: "Fittnes",
         opis: "",
         dolzina: 5
+      },
+      {
+        name: "Python",
+        opis: "",
+        dolzina: 5
+      },
+      {
+        name: "Assembler",
+        opis: "",
+        dolzina: 5
+      },
+      {
+        name: "Fittnes",
+        opis: "",
+        dolzina: 5
+      },
+      {
+        name: "Python",
+        opis: "",
+        dolzina: 5
+      },
+      {
+        name: "Assembler",
+        opis: "",
+        dolzina: 5
       }
+    
     ]
   };
 
