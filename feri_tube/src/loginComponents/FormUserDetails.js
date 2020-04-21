@@ -13,7 +13,7 @@ const FormUserDetails = (props) => {
   const submitHandler = e => {
     e.preventDefault();
     console.log(values);
-    axios.post('https://tretjaskupina.team/api/v1/auth/student/register', values)
+    axios.post('api/v1/auth/student/register', values)
       .then(response => {
         console.log(response)
       })
