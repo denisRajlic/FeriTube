@@ -9,8 +9,8 @@ const UserForm = () => {
 
   const [state, setState] = useState({
     step: 1,
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: '',
     username: '',
     password: '',
@@ -46,8 +46,8 @@ const UserForm = () => {
   };
 
   const { step } = state;
-  const { firstName, lastName, email, username, password, status, city } = state;
-  const values = { firstName, lastName, email, username, password}
+  const { first_name, last_name, email, username, password, status, city } = state;
+  const values = { first_name, last_name, email, username, password}
 
   // Based on the steps we show the correct component
   switch (step) {

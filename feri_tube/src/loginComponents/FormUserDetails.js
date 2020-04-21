@@ -31,16 +31,16 @@ const FormUserDetails = (props) => {
         <TextField 
           id='first_name'
           label="First Name..."        
-          onChange={handleChange('firstName')}
-          defaultValue={values.firstName}
+          onChange={handleChange('first_name')}
+          defaultValue={values.first_name}
         ></TextField>
         <br />
 
         <TextField 
           id='last_name'
           label="Last Name..."        
-          onChange={handleChange('lastName')}
-          defaultValue={values.lastName}
+          onChange={handleChange('last_name')}
+          defaultValue={values.last_name}
         ></TextField>
         <br />    
 
@@ -76,7 +76,6 @@ const FormUserDetails = (props) => {
           >
             Submit
           </ProceedButton>
-
       </form>
       
     </React.Fragment>      
