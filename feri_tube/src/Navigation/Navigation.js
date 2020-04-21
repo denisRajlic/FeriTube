@@ -32,6 +32,7 @@ const Navigation = () => {
           <Typography variant="h6" className={classes.title}>
             {}
           </Typography>
+          <Button component={ Link } color="inherit" to="/contact">Contact</Button>
           <Button component={ Link } color="inherit" to="/register">Register</Button>
           <Button component={ Link } color="inherit" to="/login">Login</Button>
         </Toolbar>
