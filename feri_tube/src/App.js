@@ -10,6 +10,7 @@ import Container from '@material-ui/core/Container';
 import Upload from './Upload/Upload';
 import Contact from './Contact/Contact';
 import About from './About/About';
+import uuid from 'uuid'
 
 class App extends Component {
   state = {
@@ -25,7 +26,7 @@ class App extends Component {
         dolzina: 5
       },
       {
-        name: "Fittnes",
+        name: "Fitness",
         opis: "",
         dolzina: 5
       },
@@ -40,7 +41,7 @@ class App extends Component {
         dolzina: 5
       },
       {
-        name: "Fittnes",
+        name: "Fitness",
         opis: "",
         dolzina: 5
       },
@@ -85,7 +86,7 @@ class App extends Component {
         <Route
           path="/"
           exact
-          render={props => <HomePage {...props} podatki={this.state.courses} setter={this.currentSetter.bind(this)}/>}
+          render={props => <HomePage key={uuid()} {...props} podatki={this.state.courses} setter={this.currentSetter.bind(this)}/>}
         />
         <Route path="/video" exact component = {VideoPage} />
         <Route path="/upload" exact component = {Upload} />

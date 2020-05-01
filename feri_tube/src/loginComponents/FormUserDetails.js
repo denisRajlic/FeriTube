@@ -5,11 +5,6 @@ import axios from 'axios';
 
 const FormUserDetails = (props) => {
 
-  const proceed = e => {
-    e.preventDefault(); 
-    props.nextStep();
-  };
-
   const submitHandler = e => {
     e.preventDefault();
     console.log(values);
