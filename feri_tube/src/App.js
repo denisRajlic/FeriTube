@@ -9,6 +9,7 @@ import Login from './Login/Login';
 import Container from '@material-ui/core/Container';
 import Upload from './Upload/Upload';
 import Contact from './Contact/Contact';
+import About from './About/About';
 
 class App extends Component {
   state = {
@@ -77,6 +78,7 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <Container>
+        <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/register" exact component={UserForm} />
         <Route path="/login" exact component={Login} />
