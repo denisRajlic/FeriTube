@@ -19,7 +19,7 @@ const Confirm = (props) => {
   }
 
   // Destructuring
-  const { values: { firstName, lastName, email, username, password, status, city } } = props;
+  const { values: { firstName, lastName, email, username, status, city } } = props;
   
   const useStyles = makeStyles((theme) => ({
     marginAutoContainer: {
