@@ -12,6 +12,9 @@ import Contact from './Contact/Contact';
 import About from './About/About';
 import uuid from 'uuid'
 
+import { Provider } from 'react-redux';
+import store from './store';
+
 class App extends Component {
   state = {
     courses: [ //testni podatki
@@ -76,22 +79,24 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Navigation />
-        <Container>
-        <Route path="/about" exact component={About} />
-        <Route path="/contact" exact component={Contact} />
-        <Route path="/register" exact component={UserForm} />
-        <Route path="/login" exact component={Login} />
-        <Route
-          path="/"
-          exact
-          render={props => <HomePage key={uuid()} {...props} podatki={this.state.courses} setter={this.currentSetter.bind(this)}/>}
-        />
-        <Route path="/video" exact component = {VideoPage} />
-        <Route path="/upload" exact component = {Upload} />
-        </Container>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <Navigation />
+          <Container>
+          <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/register" exact component={UserForm} />
+          <Route path="/login" exact component={Login} />
+          <Route
+            path="/"
+            exact
+            render={props => <HomePage key={uuid()} {...props} podatki={this.state.courses} setter={this.currentSetter.bind(this)}/>}
+          />
+          <Route path="/video" exact component = {VideoPage} />
+          <Route path="/upload" exact component = {Upload} />
+          </Container>
+        </div>
+      </Provider>
     );
   }
 }
