@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import UserForm from './loginComponents/UserForm';
 import Navigation from './Navigation/Navigation';
@@ -15,69 +15,73 @@ import uuid from 'uuid'
 import { Provider } from 'react-redux';
 import store from './store';
 
-class App extends Component {
-  state = {
-    courses: [ //testni podatki
-      {
-        name: "Python",
-        opis: "",
-        dolzina: 5
-      },
-      {
-        name: "Assembler",
-        opis: "",
-        dolzina: 5
-      },
-      {
-        name: "Fitness",
-        opis: "",
-        dolzina: 5
-      },
-      {
-        name: "Python",
-        opis: "",
-        dolzina: 5
-      },
-      {
-        name: "Assembler",
-        opis: "",
-        dolzina: 5
-      },
-      {
-        name: "Fitness",
-        opis: "",
-        dolzina: 5
-      },
-      {
-        name: "Python",
-        opis: "",
-        dolzina: 5
-      },
-      {
-        name: "Assembler",
-        opis: "",
-        dolzina: 5
-      }
-    
-    ],
-    current: [{
-      name: "Assembler",
-      opis: "",
-      dolzina: 5
-    }]
-  };
+import { loadUser } from './actions/authActions';
 
-  currentSetter(item) {
-    this.setState(this.current = [{
+const App = () => {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
+  const [state, setState] = useState({
+      courses: [ //testni podatki
+        {
+          name: "Python",
+          opis: "",
+          dolzina: 5
+        },
+        {
+          name: "Assembler",
+          opis: "",
+          dolzina: 5
+        },
+        {
+          name: "Fitness",
+          opis: "",
+          dolzina: 5
+        },
+        {
+          name: "Python",
+          opis: "",
+          dolzina: 5
+        },
+        {
+          name: "Assembler",
+          opis: "",
+          dolzina: 5
+        },
+        {
+          name: "Fitness",
+          opis: "",
+          dolzina: 5
+        },
+        {
+          name: "Python",
+          opis: "",
+          dolzina: 5
+        },
+        {
+          name: "Assembler",
+          opis: "",
+          dolzina: 5
+        }
+      
+      ],
+      current: [{
+        name: "Assembler",
+        opis: "",
+        dolzina: 5
+      }]
+    }
+  );
+
+  const currentSetter = (item) => {
+    setState(...state.current = [{
       name: item.name,
       opis: item.opis,
       dolzina: item.dolzina
     }])
-    console.log(item);
-    
   }
 
-  render() {
     return (
       <Provider store={store}>
         <div className="App">
@@ -90,7 +94,7 @@ class App extends Component {
           <Route
             path="/"
             exact
-            render={props => <HomePage key={uuid()} {...props} podatki={this.state.courses} setter={this.currentSetter.bind(this)}/>}
+            render={props => <HomePage key={uuid()} {...props} podatki={state.courses} setter={currentSetter.bind(this)}/>}
           />
           <Route path="/video" exact component = {VideoPage} />
           <Route path="/upload" exact component = {Upload} />
@@ -98,7 +102,6 @@ class App extends Component {
         </div>
       </Provider>
     );
-  }
 }
 
 export default App;
