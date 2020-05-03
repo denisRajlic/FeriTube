@@ -32,17 +32,19 @@ export const loadUser = () => (dispatch, getState) => {
 };
 
 // Register user
-export const register = (values) => dispatch => {
-  console.log("DELA?")
+export const register = ({ first_name, last_name, email, username, password }) => dispatch => {
   // Headers
   const config = {
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      "Accept": "application/json",
     }
   }
 
   // Request body
-  const body = JSON.stringify(values);
+  const body = JSON.stringify({ first_name, last_name, email, username, password });
+  console.log(body);
+  
   axios.post('api/v1/auth/student/register', body, config)
     .then(res => dispatch({
       type: REGISTER_SUCCESS,
