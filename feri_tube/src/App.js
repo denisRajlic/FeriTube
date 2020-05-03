@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 import HomePage from "./HomePage/HomePage";
 import VideoPage from "./VideoPage/VideoPage";
 import Login from "./Login/Login";
+import RegisterModal from './auth/RegisterModal';
 import Container from "@material-ui/core/Container";
 import Upload from "./Upload/Upload";
 import Contact from "./Contact/Contact";
@@ -97,7 +98,7 @@ const App = () => {
         <Container>
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
-          <Route path="/register" exact component={UserForm} />
+          <Route path="/register" exact component={RegisterModal} />
           <Route path="/login" exact component={Login} />
           
           <Route path="/" exact>

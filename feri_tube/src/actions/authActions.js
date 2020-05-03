@@ -31,6 +31,31 @@ export const loadUser = () => (dispatch, getState) => {
     });
 };
 
+// Register user
+export const register = (values) => dispatch => {
+  console.log("DELA?")
+  // Headers
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+
+  // Request body
+  const body = JSON.stringify(values);
+  axios.post('api/v1/auth/student/register', body, config)
+    .then(res => dispatch({
+      type: REGISTER_SUCCESS,
+      payload: res.data
+    }))
+    .catch(err => {
+      dispatch(returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL'));
+      dispatch({
+        type: REGISTER_FAIL
+      });
+    });
+}
+
 // Setup config/headers and token
 export const tokenConfig = getState => {
   // Get token from localstorage
