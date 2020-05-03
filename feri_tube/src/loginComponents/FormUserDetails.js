@@ -10,14 +10,7 @@ const FormUserDetails = props => {
   const submitHandler = e => {
     e.preventDefault();    
 
-    register(values);
-    // axios.post('api/v1/auth/student/register', values)
-    //   .then(response => {
-    //     console.log(response)
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
+    register(values);   
   }
 
   // Destructuring

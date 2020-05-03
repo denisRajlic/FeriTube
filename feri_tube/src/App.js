@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import UserForm from "./loginComponents/UserForm";
 import Navigation from "./Navigation/Navigation";
 import { Route } from "react-router-dom";
 import HomePage from "./HomePage/HomePage";
 import VideoPage from "./VideoPage/VideoPage";
 import Login from "./Login/Login";
+import Logout from './auth/Logout';
 import RegisterModal from './auth/RegisterModal';
 import Container from "@material-ui/core/Container";
 import Upload from "./Upload/Upload";
@@ -17,6 +17,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 import { loadUser } from "./actions/authActions";
+
 
 const App = () => {
 
@@ -100,7 +101,7 @@ const App = () => {
           <Route path="/contact" exact component={Contact} />
           <Route path="/register" exact component={RegisterModal} />
           <Route path="/login" exact component={Login} />
-          
+          <Route path="/logout" exact component={Logout} />
           <Route path="/" exact>
             <HomePage key={uuid()} podatki={initialState.courses} setter={currentSetter} />
           </Route>

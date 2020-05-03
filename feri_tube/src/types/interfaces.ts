@@ -35,7 +35,7 @@ export interface IRegisterModal extends IAuthForm {
 }
 
 export interface ILogoutProps {
-  logout(): void;
+  logout?(): void;
 }
 
 export interface IError {
@@ -60,37 +60,6 @@ export interface IAppNavbar {
     isAuthenticated: boolean;
     user: IUser;
   };
-}
-
-// ITEMS
-export interface IExistingItem {
-  _id: string;
-  name: string;
-}
-
-export interface IItem {
-  _id?: string;
-  name: string;
-}
-
-export interface IItemModal {
-  isAuthenticated: boolean;
-  addItem(item: IItem): void;
-}
-
-export interface IItemReduxProps extends IAuthReduxProps {
-  item: {
-    items: IExistingItem[];
-  };
-}
-
-export interface IShoppingList {
-  item: {
-    items: IExistingItem[];
-  };
-  getItems(): void;
-  deleteItem(id: string): void;
-  isAuthenticated: boolean;
 }
 
 // <<<<<<<<<<<>>>>>>>>>>>>

@@ -56,7 +56,14 @@ export const register = ({ first_name, last_name, email, username, password }) =
         type: REGISTER_FAIL
       });
     });
-}
+};
+
+// Logout User
+export const logout = () => {
+  return {
+    type: LOGOUT_SUCCESS
+  };
+};
 
 // Setup config/headers and token
 export const tokenConfig = getState => {
@@ -76,4 +83,4 @@ export const tokenConfig = getState => {
   }
 
   return config;
-}
+};
