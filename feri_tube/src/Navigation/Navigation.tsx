@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
+import Logout from '../auth/Logout';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,10 +18,9 @@ const useStyles = makeStyles((theme) => ({
     title: {
       flexGrow: 1,
     },
-  }));
+}));
 
-
-const Navigation = () => {
+export const Navigation = () => {
   const classes = useStyles();
   return (
     <div>
@@ -35,10 +35,11 @@ const Navigation = () => {
           <Button component={ Link } color="inherit" to="/contact">Contact</Button>
           <Button component={ Link } color="inherit" to="/register">Register</Button>
           <Button component={ Link } color="inherit" to="/login">Login</Button>
+          <Logout />
         </Toolbar>
     </AppBar>
     </div>
   );
 };
 
-export default Navigation;
+export default (Navigation);

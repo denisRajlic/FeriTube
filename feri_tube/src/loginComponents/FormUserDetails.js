@@ -2,19 +2,15 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import ProceedButton from '../Styles/ProceedButton';
 import axios from 'axios';
+import { register } from '../actions/authActions';
+import { connect } from 'react-redux';
 
-const FormUserDetails = (props) => {
+const FormUserDetails = props => {
 
   const submitHandler = e => {
-    e.preventDefault();
-    console.log(values);
-    axios.post('api/v1/auth/student/register', values)
-      .then(response => {
-        console.log(response)
-      })
-      .catch(error => {
-        console.log(error)
-      })
+    e.preventDefault();    
+
+    register(values);   
   }
 
   // Destructuring
@@ -76,5 +72,10 @@ const FormUserDetails = (props) => {
     </React.Fragment>      
   )
 }
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  error: state.error
+});
 
 export default FormUserDetails;
