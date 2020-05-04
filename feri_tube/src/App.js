@@ -4,7 +4,6 @@ import Navigation from "./Navigation/Navigation";
 import { Route } from "react-router-dom";
 import HomePage from "./HomePage/HomePage";
 import VideoPage from "./VideoPage/VideoPage";
-import Login from "./Login/Login";
 import Logout from './auth/Logout';
 import RegisterModal from './auth/RegisterModal';
 import LoginModal from './auth/LoginModal';
