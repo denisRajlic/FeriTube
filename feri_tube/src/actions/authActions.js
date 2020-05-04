@@ -63,7 +63,7 @@ export const login = ({ username, password }) => dispatch => {
   // Headers
   const config = {
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       "Accept": "application/json",
     }
   }

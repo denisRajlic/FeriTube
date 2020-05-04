@@ -58,6 +58,7 @@ export interface IConfigHeaders {
 export interface IAppNavbar {
   auth?: {
     isAuthenticated: boolean;
+    data: any;
     user: IUser;
   };
 }
