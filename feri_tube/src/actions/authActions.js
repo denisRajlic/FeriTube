@@ -83,6 +83,15 @@ export const login = ({ username, password }) => dispatch => {
         type: LOGIN_FAIL
       });
     });
+    
+  // Get user info
+  // axios.get('api/v1/auth/me', config)
+  // .then(res => {
+  //   console.log(res);
+  // })
+  // .catch(err => {
+  //   console.log(err);
+  // });
 };
 
 

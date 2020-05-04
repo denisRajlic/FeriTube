@@ -44,7 +44,7 @@ const LoginModal = ({
   };
 
   useEffect(() => {
-    // Check for register error
+    // Check for Login error
     if (error.id === 'LOGIN_FAIL') {
       setMsg(error.msg.msg);
     } else {
