@@ -15,8 +15,8 @@ export interface IMsg {
 
 // AUTH
 export interface IUser {
-  name?: string;
-  email: string;
+  username: string;
+  email?: string;
   password: string;
 }
 

@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const Navigation = () => {
+const Navigation = () => {
   const classes = useStyles();
   return (
     <div>
@@ -42,4 +42,4 @@ export const Navigation = () => {
   );
 };
 
-export default (Navigation);
+export default Navigation;
