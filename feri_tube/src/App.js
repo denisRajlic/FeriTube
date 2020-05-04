@@ -7,6 +7,7 @@ import VideoPage from "./VideoPage/VideoPage";
 import Login from "./Login/Login";
 import Logout from './auth/Logout';
 import RegisterModal from './auth/RegisterModal';
+import LoginModal from './auth/LoginModal';
 import Container from "@material-ui/core/Container";
 import Upload from "./Upload/Upload";
 import Contact from "./Contact/Contact";
@@ -100,7 +101,7 @@ const App = () => {
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/register" exact component={RegisterModal} />
-          <Route path="/login" exact component={Login} />
+          <Route path="/login" exact component={LoginModal} />
           <Route path="/logout" exact component={Logout} />
           <Route path="/" exact>
             <HomePage key={uuid()} podatki={initialState.courses} setter={currentSetter} />
