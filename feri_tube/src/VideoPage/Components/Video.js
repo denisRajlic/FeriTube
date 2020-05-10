@@ -31,7 +31,6 @@ function getStepDescription(numOfUrls, step) {
 const useStyles = makeStyles((theme) => ({
 	root: {
 		width: '100%',
-		//backgroundColor: "red"
 	},
 	backButton: {
 		marginRight: theme.spacing(1),
@@ -41,6 +40,26 @@ const useStyles = makeStyles((theme) => ({
 		marginBottom: theme.spacing(1),
 	}
 }));
+
+const url = "api/v1/lecture/1";
+
+function getDataFromUrl() {
+	//console.log(window.location.href);
+	var str = window.location.href;
+	var splits = str.split("/");
+	var page = splits[splits.length - 1];
+	
+	var data;
+	if(page === "videoSubject") {
+		console.log("subject");
+		data = "lecture/1";
+	}
+	else if(page === "videoFitness") {
+		console.log("fitness");
+		data = "fitness/post/2";
+	}
+	return data;
+}
 	
 /*
 const Video = props => {
@@ -119,7 +138,9 @@ class Video extends Component {
 
 	async componentDidMount() {
 		try {
-			const response = await fetch("api/v1/lecture/1");
+			//console.log(getDataFromUrl());
+			//const response = await fetch("api/v1/" + getDataFromUrl());
+			const response = await fetch("api/v1/" + getDataFromUrl());
 			if(!response.ok) {
 				throw Error(response.statusText);
 			}
@@ -132,6 +153,19 @@ class Video extends Component {
 	}
 
 	render() {
+		//console.log(window.location.href);
+		/*var str = window.location.href;
+		var splits = str.split("/");
+		
+		var page = splits[splits.length - 1];
+		if(page === "videoSubject") {
+			console.log("subject");
+		}
+		else if(page === "videoFitness") {
+			console.log("fitness");
+		}*/
+		
+		
 		const data = this.state.data;
 		var activeStep = this.state.activeStep;
 		console.log(this.state.data);

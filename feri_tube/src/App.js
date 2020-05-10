@@ -105,7 +105,8 @@ const App = () => {
           <Route path="/" exact>
             <HomePage key={uuid()} podatki={initialState.courses} setter={currentSetter} />
           </Route>
-          <Route path="/video" exact component={VideoPage} />
+          <Route path="/videoSubject" exact component={VideoPage} />
+          <Route path="/videoFitness" exact component={VideoPage} />
           <Route path="/upload" exact component={Upload} />
         </Container>
       </div>
