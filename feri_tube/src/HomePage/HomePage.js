@@ -11,7 +11,7 @@ const HomePage = props => {
   let cards = props.podatki.map((item, i) => {
     return (
       <Grid key={uuid()} item lg={3} align='center' onClick = {() => {props.setter(item);
-        history.push('/video')
+        history.push('/videoSubject')
       }}>
         <CourseCard naslov={item.name} opis={item.opis} dolzina={item.dolzina}  />
       </Grid>
