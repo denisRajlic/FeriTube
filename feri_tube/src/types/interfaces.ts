@@ -60,6 +60,7 @@ export interface IAppNavbar {
     isAuthenticated: boolean;
     data: any;
     user: IUser;
+    username?: any;
   };
 }
 

@@ -30,49 +30,49 @@ const App = () => {
       //testni podatki
       {
         name: "Python",
-        opis: "",
+        opis: "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.",
         dolzina: 5,
       },
       {
-        name: "Assembler",
-        opis: "",
-        dolzina: 5,
-      },
-      {
-        name: "Fitness",
-        opis: "",
-        dolzina: 5,
-      },
-      {
-        name: "Python",
-        opis: "",
-        dolzina: 5,
-      },
-      {
-        name: "Assembler",
-        opis: "",
+        name: "Assembly language",
+        opis: "In computer programming, assembly language, often abbreviated asm, is any low-level programming language in which there is a very strong correlation between instructions in the language and the architecture's machine code instructions.",
         dolzina: 5,
       },
       {
         name: "Fitness",
-        opis: "",
+        opis: "Regular exercise and physical activity promotes strong muscles and bones. It improves respiratory, cardiovascular health, and overall health. Staying active can also help you maintain a healthy weight, reduce your risk for type 2 diabetes, heart disease, and...",
         dolzina: 5,
       },
       {
-        name: "Python",
-        opis: "",
+        name: "C++",
+        opis: "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or 'C with Classes'. C++ allows procedural programming for intensive functions of CPU and to provide control over hardware...",
         dolzina: 5,
       },
       {
-        name: "Assembler",
-        opis: "",
+        name: "C",
+        opis: "C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system. By design, C provides constructs that map efficiently to typical machine instructions.",
+        dolzina: 5,
+      },
+      {
+        name: "Java",
+        opis: "Java is a set of computer software and specifications developed by James Gosling at Sun Microsystems, which was later acquired by the Oracle Corporation, that provides a system for developing application software and deploying it in a cross-platform computing environment.",
+        dolzina: 5,
+      },
+      {
+        name: "OOP",
+        opis: "Object-oriented programming is a programming paradigm based on the concept of 'objects', which can contain data, in the form of fields, and code, in the form of procedures. A feature of objects is an object's procedures that can access and often modify the data...",
+        dolzina: 5,
+      },
+      {
+        name: "Web",
+        opis: "Web programming refers to the writing, markup and coding involved in Web development, which includes Web content, Web client and server scripting and network security. The most common languages used for Web programming are XML, HTML, JavaScript...",
         dolzina: 5,
       },
     ],
     current: [
       {
-        name: "Assembler",
-        opis: "",
+        name: "Python",
+        opis: "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.",
         dolzina: 5,
       },
     ],

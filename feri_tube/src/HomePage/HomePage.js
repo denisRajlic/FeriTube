@@ -8,7 +8,7 @@ import uuid from 'uuid'
 const HomePage = props => {
   let history = useHistory();
   
-  let cards = props.podatki.map((item, i) => {
+  let cards = props.podatki.map((item) => {
     return (
       <Grid key={uuid()} item lg={3} align='center' onClick = {() => {props.setter(item);
         history.push('/videoSubject')

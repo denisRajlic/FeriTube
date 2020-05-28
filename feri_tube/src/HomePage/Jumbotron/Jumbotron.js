@@ -23,12 +23,7 @@ const Jumbotron = (props) => {
           />
           <CardContent>
             <Typography align="justify" variant="subtitle1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. et dolore
-              magna aliqua..{props.podatki}
-              
+              FeriTube is an online platform for learning new technologies and languages (like Python, C++, Assembly...) in your programming journey. It's free to use for students as well as professors.              
             </Typography>
           </CardContent>
         </CardActionArea>

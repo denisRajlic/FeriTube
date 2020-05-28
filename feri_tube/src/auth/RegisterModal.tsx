@@ -115,7 +115,6 @@ const RegisterModal = ({
             Submit
           </ProceedButton>
       </form>
-      
     </React.Fragment>      
   );
 };

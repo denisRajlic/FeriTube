@@ -36,8 +36,7 @@ const CourseCard = props => {
               color='textSecondary'
               component='p'
             >
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              {props.opis}
             </Typography>
           </CardContent>
         </CardActionArea>
