@@ -7,10 +7,8 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { IAuthReduxProps, IAppNavbar } from '../types/interfaces';
-import store from '../store';
 
 import Logout from '../auth/Logout';
-import { NavItem } from 'reactstrap';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,10 +22,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
 const Navigation = ({ auth }: IAppNavbar) => {
   const classes = useStyles();
-  const username = auth?.username;
+  const username = auth?.data?.relationships?.user?.username || auth?.username;
 
   // Links
   const authLinks = (
@@ -50,7 +47,6 @@ const Navigation = ({ auth }: IAppNavbar) => {
       <Button component={ Link } color="inherit" to="/login">Login</Button>
     </Fragment>
   );
-
 
   return (
     <div>
